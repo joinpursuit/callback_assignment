@@ -1,20 +1,22 @@
 // 1
 const forEachElem = (array, callback) => {
-  for (let i = 0; i < array.length; i++) callback(array[i]);
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
 };
+// const forEachElem = (array, callback) => array.forEach(el => callback(el));
 
 // 2
-const logEachElem = el => console.log(el);
-forEachElem(array, logEachElem);
+const logEachElem = array => forEachElem(array, el => console.log(el));
 
 // 3
-const logArrTypes = el => console.log(el + " is a " + typeof el);
-forEachElem(array, logArrTypes);
+const logArrTypes = array => forEachElem(array, el => console.log(el + " is a " + typeof el));
 
 // 4
 const myMap = (array, callback) => {
   let finalArr = [];
-  for (let i = 0; i < array.length; i++) finalArr.push(callback(array[i]));
+  // for (let i = 0; i < array.length; i++) finalArr.push(callback(array[i]));
+  forEachElem(array, el => finalArr.push(callback(el)));
   return finalArr;
 };
 

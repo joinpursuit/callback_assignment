@@ -2,12 +2,11 @@
 //
 // 1. Write a function `forEachElem` that takes in an array and a callback. Call the callback on each element in the array.
 
-let array = [2,5,3]
 
 const forEachElem = (arr, callback) => {
-  array.forEach((el) => {
-    callback(el)
-  })
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i])
+  }
 }
 //console.log (forEachElem(arr))
 
@@ -20,7 +19,7 @@ const logEachElem = (array) => {
   })
 }
 
-console.log(logEachElem(array));
+//console.log(logEachElem(array));
 
 
 // 3. Create a function `logArrTypes` that uses the `forEachElem` method to log each array element followed by its type. For example:
@@ -37,49 +36,61 @@ console.log(logEachElem(array));
 
 let mixedArr= [1, "cat", true];
 
-function logArrTypes (type) {
-  forEachElem(type, el => {
-    console.log (forEach((type )
+function logArrTypes (arr) {
+  forEachElem(arr, el => {
+    //console.log(`${el} is: ${typeof el} `)
   })
 }
 
-console.log("MIXED ARRAY",  logArrTypes(mixedArr))
-
+logArrTypes(mixedArr)
 
 
 // 4. Write a function `myMap` that takes in an array and a callback. Call the callback on each element of the array and add the result
 // to an output array. Return the output array.
 
+function myMap (mapArray, callback) {
+  let result = [];
+  forEachElem(mapArray, el => {
+    result.push(callback(el))
+  })
+  return result;
+}
 
-
+console.log(myMap([1,2,3], (el) => {
+  return el * 3
+}));
 
 
 
 
 // 5. Create a function 'allCaps` that takes in an array as an argument, and uses the `myMap` function to return all the elements capitalized.
 
+function allCaps (array) {
+  myMap(array, el => {
+    return el.toUpperCase()
+  });
+}
 
-
-
+//
 
 
 
 
 // 6. You are given the following functions:
 // ```js
-//
-// function conservativeSpender(balance)  {
-//   return balance > 100
-// }
-//
-// function liberalSpender(balance) {
-//   return balance > 10
-// }
-//
-// function horribleSaver (balance) {
-//   return balance > 0
-// }
-//
+
+function conservativeSpender(balance)  {
+  return balance > 100
+}
+
+function liberalSpender(balance) {
+  return balance > 10
+}
+
+function horribleSaver (balance) {
+  return balance > 0
+}
+
 // ```
 //
 // Write a function `shouldIBuyThis` that takes in a balance and a callback (one of the above functions). The fuction should return either
@@ -90,9 +101,17 @@ console.log("MIXED ARRAY",  logArrTypes(mixedArr))
 // // logs: "Sure! I've got the money!"
 // console.log(shouldIBuyThis(20, liberalSpender))
 // // logs: "Sure! I've got the money!"
-// console.log(shouldIBuyThis(20, conservativeSpender))
 // // logs:  "Nope! Gotta keep my savings up!"
 // console.log(shouldIBuyThis(101, conservativeSpender))
 // // logs: "Sure! I've got the money!"
 //
 // ```
+
+function shouldIBuyThis (balance, callback) {
+  if (callback(balance)) {
+    return "sure, you are good"
+  }
+  return "nope, save your money"
+}
+
+//console.log(shouldIBuyThis(101, liberalSpender))

@@ -15,7 +15,9 @@ logArrTypes(mixedArr)
 ```
 4. Write a function `myMap` that takes in an array and a callback. Call the callback on each element of the array and add the result
 to an output array. Return the output array.
-5. Create a function `allCaps` that takes in an array as an argument, and uses the `myMap` function to return all the elements capitalized. 
+
+5. Create a function `allCaps` that takes in an array as an argument, and uses the `myMap` function to return all the elements capitalized.
+
 6. You are given the following functions:
 ```js
 

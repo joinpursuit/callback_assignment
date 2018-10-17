@@ -20,11 +20,27 @@ const logEachElem = (arr, callback) => {
   }
 }
 const theEl = (arrEl) => {
-  return arrEl;
+  console.log(arrEl);
 }
-console.log(logEachElem([1, 2, 3, 4], theEl))
+
+// logEachElem([1, 2, 3, 4], theEl);
 
 // Question 3:
+
+let mixedArr = [1, 'cat', true];
+
+const logArrTypes = (arr, callback) => {
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i]);
+  }
+}
+
+const elAndType = (arrEl, arrType) => {
+  arrType = typeof arrEl;
+  console.log(`${arrEl} is a ${arrType}.`);
+}
+
+// logArrTypes([1, "cat", true], elAndType);
 
 // Question 4:
 
@@ -42,19 +58,6 @@ const myMap = (arr, callback) => {
 
 // Question 5:
 
-// const allCaps = (arr) => {
-//   const myMap = (toCaps) => {
-//     toCaps = [];
-//     for (let i = 0; i < arr.length; i++) {
-//       toCaps.push(arr[i]);
-//     }
-//     return cappedOutput = toCaps;
-//   }
-//   return cappedOutput;
-// }
-//
-// console.log(allCaps(myMap(['Hi', 'Bye', 'Jello'])))
-
 const allCaps = (arr) => {
   let cappedEl = arr.map(el => {
     return el.toUpperCase();
@@ -67,25 +70,36 @@ const allCaps = (arr) => {
 // ** I Feel Attacked ** //
 
 function conservativeSpender(balance)  {
-  return balance > 100
+  if (balance > 100) {
+    return `Sure! I've got the money!`;
+  } else {
+    return `Nope! Gotta keep my savings up!`;
+  }
+  // return balance > 100
 }
 
 function liberalSpender(balance) {
-  return balance > 10
+  if (balance > 10) {
+    return `Sure! I've got the money!`;
+  } else {
+    return `Nope! Gotta keep my savings up!`;
+  }
+  // return balance > 10
 }
 
 function horribleSaver (balance) {
-  return balance > 0
+  if (balance > 0) {
+    return `Sure! I've got the money!`;
+  } else {
+    return `Nope! Gotta keep my savings up!`;
+  }
+  // return balance > 0
 }
+
+// console.log(liberalSpender(20))
 
 function shouldIBuyThis (balance, callback) {
-  if (callback === conservativeSpender) {
-    return conservativeSpender(balance);
-  } else if (callback === liberalSpender) {
-    return liberalSpender();
-  } else {
-    return horribleSaver();
-  }
+ return callback(balance, this);
 }
 
-// console.log(shouldIBuyThis(20, conservativeSpender))
+// console.log(shouldIBuyThis(2, liberalSpender))

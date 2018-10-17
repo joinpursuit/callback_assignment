@@ -37,8 +37,8 @@ function logArrTypes(arr){
 function myMap(array, callback){
   result = []
   for(i=0,i<arr.length;i++){
-  return result+=callback(arr[i])
-  }
+   }
+  result.push(callback(arr[i]))
 }
 
 5. Create a function 'allCaps' that takes in an array as an argument, and uses the `myMap` function to return all the elements capitalized.

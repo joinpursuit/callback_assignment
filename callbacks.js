@@ -9,7 +9,12 @@
 // Output:
 // Logs "Hello!" to the console
 // ```
-//
+function callback() {
+  console.log("Hello!");
+  callback;
+}
+
+callback();
 // ## Question Two
 //
 // Write a function that takes in a callback and a boolean.  If the boolean is true, call the callback, otherwise log "Ignoring the callback" to the console.

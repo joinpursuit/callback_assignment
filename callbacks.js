@@ -42,7 +42,8 @@ cloudyDay(rainy, true);
 
 // ## Question Three
 //
-// Write a function that take in a number and two callbacks.  It should apply the first callback to the number, then the second callback, then return the result
+// Write a function that takes in a number and two callbacks.  It should apply
+// the first callback to the number, then the second callback, then return the result
 //
 // ```
 // Input: 4, (num) => num + 3, (num) => num * 2
@@ -50,8 +51,22 @@ cloudyDay(rainy, true);
 // Output: 14
 //
 // ```
-//
-//
+function whatResult (num, callback1, callback2) {
+  let result = callback1(num);
+  return callback2(result);
+}
+
+function addCaller (num) {
+  return num + 3;
+}
+
+function multiplyCaller (num) {
+
+  return num * 2;
+}
+
+console.log(whatResult(4, addCaller, multiplyCaller));
+
 // ## Question Four
 //
 // You are given the following functions:

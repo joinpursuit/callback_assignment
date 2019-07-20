@@ -172,7 +172,7 @@ Logs the following to the console:
 34
 */
 
-console.log('QUESTION 5.b');
+console.log('QUESTION 5.b :');
 const logEachElem = (element) => {
   console.log(element);
 };
@@ -181,6 +181,26 @@ let array2 = [1, 2, 34];
 forEachElem(array2, logEachElem);
 console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n`);
 
+/* c. Create a function logArrTypes that uses the
+forEachElem method to log each array element followed by its type.
+
+Input: [1,"Hi", true, {color: "green"}]
+Output:
+Logs the following to the console:
+1 is a number
+Hi is a string
+true is a boolean
+[object Object] is a object
+*/
+
+console.log('QUESTION 5.c :');
+const logArrTypes = (element) => {
+  console.log(element, ' is a ', typeof element);
+};
+
+let array8 = [1,"Hi", true, {color: "green"}];
+forEachElem(array8, logArrTypes);
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n`);
 
 
 /* Question Six

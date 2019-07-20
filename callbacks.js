@@ -17,14 +17,29 @@ function callback() {
 callback();
 // ## Question Two
 //
-// Write a function that takes in a callback and a boolean.  If the boolean is true, call the callback, otherwise log "Ignoring the callback" to the console.
+// Write a function that takes in a callback and a boolean.  If the boolean is
+// true, call the callback, otherwise log "Ignoring the callback" to the console.
 //
 // ```
 // Input:
 // () => console.log("")
 //
 // ```
-//
+function cloudyDay (callback, boolean) {
+  if (boolean === true) {
+    console.log(`It's ${boolean}, check the forecast.`);
+    callback();
+  } else {
+    console.log("Ignoring the callback");
+  }
+}
+
+function rainy() {
+  console.log("It might rain.");
+}
+
+cloudyDay(rainy, true);
+
 // ## Question Three
 //
 // Write a function that take in a number and two callbacks.  It should apply the first callback to the number, then the second callback, then return the result

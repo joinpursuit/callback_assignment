@@ -362,7 +362,21 @@ console.log(removeEvenNumbers(arr6))
 //
 // c. Write a function called `removeShortWords` that takes in an array and returns an array with all strings containing fewer than 4 characters removed.
 //
+// define removeShortWords function (arr) as argument
+//
+//
+let arr7 = ["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"]
 
+function removeShortWords(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length <= 4) {
+      arr.pop(i)
+    }
+  }
+  return arr
+}
+
+console.log(removeShortWords(arr7))
 
 // ```
 // Input: ["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"]

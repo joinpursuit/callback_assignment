@@ -317,8 +317,10 @@ let arr5 = [1, 4, 6, 7, -3]
 function myFilter(arr, callback) {
   let output = []
   for (let i = 0; i < arr.length; i++) {
-    if (callback === true) {
-      output.push(callback(arr[i]))
+    //console.log(i);
+    if (callback(arr[i])) {
+      //console.log(callback);
+      output.push(arr[i])
     }
   }
   return output
@@ -326,7 +328,7 @@ function myFilter(arr, callback) {
 
 function overFiveCheck(num){
   if (num < 5) {
-    return num
+    return true
   }
 }
 
@@ -343,17 +345,16 @@ console.log(myFilter(arr5, overFiveCheck))
 
 let arr6 = [1,2,3,4,5,6,7,8,9]
 
-function removeEvenNumbers(arr) {
-  let output = []
-  for (let i = 0; i < arr.Length; i++) {
+function removeEvenNumbers(i) {
     if (i % 2 === 1) {
-      output.push(i)
-    }
-  }
-  return output
+  return true
+} else {
+  return false
+}
 }
 
-console.log(removeEvenNumbers(arr6))
+let erase1 = myFilter(arr6, removeEvenNumbers)
+console.log(erase1)
 
 // ```
 // Input: [1,2,3,4,5,6,7,8,9]

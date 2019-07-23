@@ -136,45 +136,48 @@ Call the callback on each element in the array.*/
 // /*Create a function `logArrTypes` that uses the `forEachElem` method
 // to log each array element followed by its type.*/
 //
-function forEachElem(arr, callback) {
-  for (let i = 0; i < arr.length; i++) {
-    callback(arr[i])
-  }
-}
+// function forEachElem(arr, callback) {
+//   for (let i = 0; i < arr.length; i++) {
+//     callback(arr[i])
+//   }
+// }
 
-function logArrTypes(arr) {
-  if (arr <= Infinity) {
-    console.log(arr + ' is a number')
-  } else if (arr.prototype.include('')) {
-    console.log(arr + ' is a string')
-  } else if (arr === true || arr === false) {
-    console.log(arr + ' is a boolean')
-  } else {
-    console.log(arr + 'is an object')
-  }
-}
+// function logArrTypes(arr) {
+//   if (arr <= Infinity) {
+//     console.log(arr + ' is a number')
+//   } else if (arr.prototype.include('')) {
+//     console.log(arr + ' is a string')
+//   } else if (arr === true || arr === false) {
+//     console.log(arr + ' is a boolean')
+//   } else {
+//     console.log(arr + 'is an object')
+//   }
+// }
+//
+// function logArrTypes(arr) {
+//   console.log(typeof arr)
+// }
+// let arr = [1,"Hi", true, {color: "green"}]
+// forEachElem(arr, logArrTypes)
 
-let arr = [1,"Hi", true, {color: "green"}]
-forEachElem(arr, logArrTypes)
 
 
 
-
-//Question 6//why am I getting two 9s insteadof one
-/* Write a function called `myMap` that takes in an array and a callback as arguments.
-It should return a new array with the callback applied to each element in the array.*/
+//Question 6//why am I getting two 9s instead of one
+//  Write a function called `myMap` that takes in an array and a callback as arguments.
+// It should return a new array with the callback applied to each element in the array.
 
 // console.log('-----Question 6a-----')
 // function myMap(arr, callback) {
 //   let mappedArr = [];
-//   for(let i = 0; i < arr.length; i++) {
-//     callback(arr[i])
+//   // for(let i = 0; i < arr.length; i++) {
+//   //   callback(arr[i]) the outer loop was returning an interated value thats why I was getting the double 9
 //     for (let element of arr) {
 //       mappedArr.push(callback(element))
 //     }
 //     return mappedArr
 // }
-// }
+//
 //
 // function multiple(arr) {
 //   console.log(arr * 3)
@@ -193,15 +196,13 @@ and uses the `myMap` function to return all the elements capitalized.*/
 // console.log('-----Question 6b-----')
 //
 // function allCaps(arr, callback) {
-//   let mappedArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     callback(arr[i])
+//   let mappedArr = []
 //     for (let element of arr) {
 //       mappedArr.push(callback(element))
 //     }
 //     return mappedArr
 //   }
-// }
+//
 //
 // function upperCase(arr) {
 //   console.log(arr.toUpperCase())
@@ -223,13 +224,10 @@ return a new array with only values that return true when passed into the callba
 //
 // function myFilter(arr, callback) {
 //   let trueVal = [];
-//   for (let i = 0; i < arr.length; i++) {
-//   callback(arr[i])
 //   for (let element of arr) {
 //     trueVal.push(callback(element))
 //   }
 //   return trueVal
-// }
 // }
 //
 // function arrTrueOrFalse(arr) {
@@ -250,16 +248,12 @@ return a new array with only values that return true when passed into the callba
 // that takes in an array and returns an array with all the even numbers removed.*/
 //
 //
-//
 // function removeEvenNumbers(arr, callback) {
 //   let oddArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//   callback(arr[i])
 //   for (let element of arr) {
 //     oddArr.push(callback(element))
 //   }
 //   return oddArr
-// }
 // }
 //
 // function onlyOddNums(arr) {
@@ -282,13 +276,10 @@ return a new array with only values that return true when passed into the callba
 //
 // function removeShortWords(arr, callback) {
 //   let longWrds = [''];
-//   for (let i = 0; i < arr.length; i++) {
-//   callback(arr[i])
 //   for (let element of arr) {
 //     longWrds.push(callback(element))
 //   }
 //   return longWrds
-// }
 // }
 //
 // function byeShorty(arr) {

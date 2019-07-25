@@ -1,30 +1,33 @@
-// ## Question One
-//
-// Write a function that takes in a callback and calls the callback
-//
-// ```
-// Input:
-// function() { console.log("Hello!") }
-//
-// Output:
-// Logs "Hello!" to the console
-// ```
+// // ## Question One
+// //
+// // Write a function that takes in a callback and calls the callback
+// //
+// // ```
+// // Input:
+// // function() { console.log("Hello!") }
+// //
+// // Output:
+// // Logs "Hello!" to the console
+// // ```
+console.log("______________");
+
 function callback() {
   console.log("Hello!");
   callback;
 }
-
 callback();
-// ## Question Two
-//
-// Write a function that takes in a callback and a boolean.  If the boolean is
-// true, call the callback, otherwise log "Ignoring the callback" to the console.
-//
-// ```
-// Input:
-// () => console.log("")
-//
-// ```
+// // ## Question Two
+// //
+// // Write a function that takes in a callback and a boolean.  If the boolean is
+// // true, call the callback, otherwise log "Ignoring the callback" to the console.
+// //
+// // ```
+// // Input:
+// // () => console.log("")
+// //
+// // ```
+console.log("______________");
+
 function cloudyDay (callback, boolean) {
   if (boolean === true) {
     console.log(`It's ${boolean}, check the forecast.`);
@@ -39,18 +42,21 @@ function rainy() {
 }
 
 cloudyDay(rainy, true);
+//
+// // ## Question Three
+// //
+// // Write a function that takes in a number and two callbacks.  It should apply
+// // the first callback to the number, then the second callback, then return the result
+// //
+// // ```
+// // Input: 4, (num) => num + 3, (num) => num * 2
+// //
+// // Output: 14
+// //
+// // ```
+console.log("______________");
 
-// ## Question Three
-//
-// Write a function that takes in a number and two callbacks.  It should apply
-// the first callback to the number, then the second callback, then return the result
-//
-// ```
-// Input: 4, (num) => num + 3, (num) => num * 2
-//
-// Output: 14
-//
-// ```
+
 function whatResult (num, callback1, callback2) {
   let result = callback1(num);
   return callback2(result);
@@ -86,7 +92,8 @@ console.log(whatResult(4, addCaller, multiplyCaller));
 //
 // ```
 //
-// Write a function `shouldIBuyThis` that takes in a balance and a callback (one of the above functions). The function should return either
+// Write a function `shouldIBuyThis` that takes in a balance and a callback
+// (one of the above functions). The function should return either
 // "Sure! I've got the money!" or "Nope! Gotta keep my savings up!"
 //
 // ```js
@@ -100,10 +107,41 @@ console.log(whatResult(4, addCaller, multiplyCaller));
 // // logs: "Sure! I've got the money!"
 //
 // ```
-//
+console.log("______________");
+
+function shouldIBuyThis(balance, callback) {
+  const boolean = callback(balance);
+  if (boolean === true) {
+    return "Sure! I've got the money!";
+  } else {
+    return "Nope! Gotta keep my savings up!";
+  }
+}
+
+function liberalSpender(balance) {
+  return balance > 10
+}
+
+function conservativeSpender(balance)  {
+  return balance > 100
+}
+
+
+function horribleSaver (balance) {
+  return balance > 0
+}
+
+
+//testing our results
+console.log(shouldIBuyThis(400, conservativeSpender), "sure");
+console.log(shouldIBuyThis(1, conservativeSpender), 'nope');
+console.log(shouldIBuyThis(400, liberalSpender), 'sure');
+console.log(shouldIBuyThis(2, liberalSpender), 'nope');
+
 // ## Question Five
 //
-// a. Write a function `forEachElem` that takes in an array and a callback. Call the callback on each element in the array.
+// a. Write a function `forEachElem` that takes in an array and a callback.
+// Call the callback on each element in the array.
 //
 // ```
 // Input: [1,4,5,6], (elem) => console.log("$" + elem)
@@ -115,8 +153,23 @@ console.log(whatResult(4, addCaller, multiplyCaller));
 // 5
 // 6
 // ```
-//
-// b. Create a function `logEachElem` that takes an array as an argument logs every element in the input array.  Use `forEachElem` inside the body of your function.
+console.log("______________");
+
+function forEachElem(arr, callback) {
+  for (let i = 0; i < arr.length; i++){
+    callback(arr[i]);
+  }
+}
+
+function cb(elem) {
+  console.log("$" + elem);
+}
+
+// tests
+forEachElem([1,4,5,6], cb);
+
+// b. Create a function `logEachElem` that takes an array as an argument logs
+// every element in the input array.  Use `forEachElem` inside the body of your function.
 //
 //
 // ```

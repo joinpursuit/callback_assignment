@@ -181,7 +181,24 @@ forEachElem([1,4,5,6], cb);
 // 2
 // 34
 // ```
-//
+console.log("______________");
+
+//this is when we tried getting the answer without using the callback
+// function logEachElem(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+//   }
+// }
+
+//now we have to try following the directions
+function logEachElem(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let element = arr[i];
+  return forEachElem(arr, (element => console.log(element)));
+  }
+}
+
+logEachElem([1,2,34]);
 // c. Create a function `logArrTypes` that uses the `forEachElem` method to log each array element followed by its type.
 //
 //

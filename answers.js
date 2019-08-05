@@ -79,6 +79,11 @@ function log(x) {
     return x;
 }
 
+function checker(x) {
+    let type = typeof x
+    return x + " is a " + type
+}
+
 forEachElem([1, 2, 3, 4], double);
 
 // B
@@ -89,3 +94,38 @@ function logEachElem(arr) {
 
 logEachElem([10, 9, 8, 7, 6])
 
+// C
+
+function logArrTypes(arr) {
+    forEachElem(arr, checker)
+}
+
+logArrTypes([1, "Hi", true, { color: "green" }])
+
+// ## Question 6
+
+function myMap(arr, callback) {
+    let output = []
+    for (let i = 0; i < arr.length; i++) {
+        output.push(callback(arr[i]))
+    }
+    return output
+}
+
+function capitalize(i) {
+    return i.toUpperCase()
+}
+
+function allCaps(arr) {
+    console.log(myMap(arr, capitalize));
+}
+
+allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"])
+
+// ## Question Seven
+
+function myFilter(arr, callback) {
+    callback(el){
+        return
+    }
+}

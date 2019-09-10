@@ -248,20 +248,20 @@ console.log("______________");
 // ```
 function myMap(arr, callback) {
   for (let i = 0; i < arr.length; i++) {
-  let newMappy = myNextCallback(arr[i]);
-  console.log(newMappy);
+  callback(arr[i]);
+  console.log(callback(arr[i]));
   }
 }
 
-function myNextCallback(num) {
-    return num*3;
-  }
 
-myMap([3,5,6]);
+myMap([3,5,6], function(num) { return num * 3 });
 //
+console.log("______________");
 // b. Create a function `allCaps` that takes in an array as an argument, and uses the `myMap`
 //function to return all the elements capitalized.
 //
+
+allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"];
 // ```
 // Input: ["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"]
 //
@@ -279,7 +279,20 @@ myMap([3,5,6]);
 //
 // ## Question Seven
 //
-// a. Write a function called `myFilter` that takes in an array and a callback as arguments.  The callback should take in an element and return a boolean.  `myFilter` should return a new array with only values that return true when passed into the callback.
+// a. Write a function called `myFilter` that takes in an array and a callback as arguments.
+//The callback should take in an element and return a boolean.  `myFilter` should return a
+//new array with only values that return true when passed into the callback.
+const myFilter = (arr, callback) => {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i]) === true) {
+      newArray.push(arr[i]);
+      console.log(newArray);
+    }
+  }
+}
+
+myFilter([1,4,6,7,-3], num => num < 5);
 //
 // ```
 // Input: [1,4,6,7, -3], num => num < 5

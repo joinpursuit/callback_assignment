@@ -212,7 +212,28 @@ logEachElem([1,2,34]);
 // true is a boolean
 // [object Object] is a object
 // ```
-//
+console.log("______________");
+
+function forEachElem(arr, callback) {
+  for (let i = 0; i < arr.length; i++){
+    callback(arr[i]);
+  }
+}
+
+function cb(elem) {
+  console.log("$" + elem);
+}
+
+let typesArr = [1, "Hi", true, {color: "green"}];
+
+function logArrTypes(arr, callback) {
+  for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i] + " is an " + typeof(arr[i]));
+  }
+}
+
+console.log(logArrTypes(typesArr, forEachElem));
+
 // ## Question Six
 //
 // a. Write a function called `myMap` that takes in an array and a callback as arguments.  It should return a new array with the callback applied to each element in the array.

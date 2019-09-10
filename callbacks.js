@@ -300,7 +300,19 @@ myFilter([1,4,6,7,-3], num => num < 5);
 // Output:  [1, 4, -3]
 // ```
 //
-// b. Write a function called `removeEvenNumbers` that takes in an array and returns an array with all the even numbers removed.
+// b. Write a function called `removeEvenNumbers` that takes in an array and returns an array with
+//all the even numbers removed.
+const removeEvenNumbers = (arr) => {
+  let justOdds = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 != 0) {
+      justOdds.push(arr[i]);
+      console.log(justOdds);
+    }
+  }
+}
+
+removeEvenNumbers([1,2,3,4,5,6,7,8,9]);
 //
 // ```
 // Input: [1,2,3,4,5,6,7,8,9]

@@ -319,7 +319,19 @@ removeEvenNumbers([1,2,3,4,5,6,7,8,9]);
 // Output: [1,3,5,7,9]
 // ```
 //
-// c. Write a function called `removeShortWords` that takes in an array and returns an array with all strings containing fewer than 4 characters removed.
+// c. Write a function called `removeShortWords` that takes in an array and returns an array
+//with all strings containing fewer than 4 characters removed.
+const removeShortWords = (arr) => {
+  let onlyLongWordsHere = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > 4) {
+      onlyLongWordsHere.push(arr[i]);
+      // console.log(onlyLongWordsHere);
+    }
+  }
+  return onlyLongWordsHere;
+}
+removeShortWords(["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"]);
 //
 // ```
 // Input: ["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"]

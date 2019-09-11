@@ -259,9 +259,21 @@ myMap([3,5,6], function(num) { return num * 3 });
 console.log("______________");
 // b. Create a function `allCaps` that takes in an array as an argument, and uses the `myMap`
 //function to return all the elements capitalized.
-//
+function myMap(arr, callback) {
+  for (let i = 0; i < arr.length; i++) {
+  callback(arr[i]);
+  }
+}
 
-allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"];
+function capitalizing (arr) {
+  console.log(arr.toUpperCase());
+}
+
+const allCaps = (arr) => {
+  return myMap(arr, capitalizing);
+}
+
+allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"]);
 // ```
 // Input: ["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"]
 //

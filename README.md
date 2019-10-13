@@ -172,3 +172,7 @@ Output:
   'ECMAScript',
   'specification' ]
 ```
+
+## Question Eight
+
+[Callback questions from codewars](https://www.codewars.com/collections/callback)

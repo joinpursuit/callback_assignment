@@ -66,3 +66,17 @@ function conservativeSpender(balance)  {
   console.log(shouldIBuyThis(20, liberalSpender))
   console.log(shouldIBuyThis(20, conservativeSpender))
   console.log(shouldIBuyThis(101, conservativeSpender))
+
+  console.log("Question 6b")
+
+  const forEachElem = (arr,cb1)=>{
+      cb1= cb1(arr);
+    }
+    const logE = (arr) =>{      
+        let newArr =[];
+      for (let i = 0; i<arr.length; i++){
+    console.log(newArr.push(arr[i]))
+    }
+}
+
+    console.log(forEachElem([1,2,3,5],logE))

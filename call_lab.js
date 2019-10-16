@@ -1,31 +1,31 @@
 console.log("Question 1")
 
 const callHello = (cb1) =>{
-    return cb1
+    cb1 = cb1
 }
-callHello(console.log("hello"))
+
+callHello(console.log("Hello!"))
 
 console.log("Question 2")
 
-const cbBoo = (bl) =>{
-    if (bl ===  true){
-       return console.log(bl)
+const cbBoo = (b1,boo) =>{
+    if (boo ===  true){
+       b1();
     }
     else {
        console.log("Ignoring the callback")
     }
 }
-console.log(cbBoo(0))
+const mySta = () => {console.log("Im true")}
+console.log(cbBoo(mySta, false))
+
+// console.log("Question 3")
+// const playMusic = (cb2, num) =>{
+//     for(let i =1; i<=num; i++){
+//         console.log(cb2);
+//     }
+// }
+// console.log(playMusic("Rock", 4))
 
 
-
-console.log("Question 3")
-const playMusic = (cb2, num) =>{
-    for(let i =1; i<=num; i++){
-        console.log(cb2);
-    }
-}
-console.log(playMusic("Rock", 4))
-
-
-console.log("Question 4")
+// console.log("Question 4")

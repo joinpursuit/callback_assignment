@@ -13,6 +13,18 @@ Output:
 Logs "Hello!" to the console
 ```
 
+<!-- console.log("question one")
+
+const sayHello = (str) => {
+return "hello!"
+}
+
+const callBack = (fn) => {
+    return sayHello()
+}
+
+console.log(callBack()) -->
+
 ## Question Two
 
 Write a function that takes in a callback and a boolean.  If the boolean is true, call the callback, otherwise log "Ignoring the callback" to the console.
@@ -27,6 +39,18 @@ Input: () => console.log("Testing"), false
 Output:
 Logs "Ignoring the callback" to the console.
 ```
+
+const ignore = (str) => {
+    return "ignoring the callback"
+}
+const truOrNot = (statement) => {
+    if (statement === true) {
+        return true
+    } else {
+        return ignore()
+    }
+}
+console.log(truOrNot(1)); // returns false
 
 ## Question Three
 

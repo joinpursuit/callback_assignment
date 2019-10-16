@@ -38,3 +38,31 @@ const finResult = (num, cb1,cb2) =>{
 const add3 = (num)=>{return num+3};
 const mut2 = (num)=>{return num*2};
 console.log(finResult(4,add3,mut2))
+
+
+console.log("Question 5")
+function conservativeSpender(balance)  {
+    return balance > 100
+  }
+  
+  function liberalSpender(balance) {
+    return balance > 10
+  }
+  
+  function horribleSaver (balance) {
+    return balance > 0
+  }
+
+//   console.log(conservativeSpender(101))
+  const shouldIBuyThis = (money,cb1)=>{
+      cb1 = cb1(money);
+      if(cb1===true){
+          console.log("Sure! I've got the money!")
+      }
+      else{
+          console.log("Nope! Gotta keep my savings up!")
+      }
+  }
+  console.log(shouldIBuyThis(20, liberalSpender))
+  console.log(shouldIBuyThis(20, conservativeSpender))
+  console.log(shouldIBuyThis(101, conservativeSpender))

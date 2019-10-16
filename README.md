@@ -18,12 +18,31 @@ Logs "Hello!" to the console
 Write a function that takes in a callback and a boolean.  If the boolean is true, call the callback, otherwise log "Ignoring the callback" to the console.
 
 ```
-Input:
-() => console.log("")
+Input: () => console.log(""), true
 
+Output:
+Logs "" to the console
+
+Input: () => console.log("Testing"), false
+Output:
+Logs "Ignoring the callback" to the console.
 ```
 
 ## Question Three
+
+Write a function that takes in a callback and a number.  It should call the callback that many times.
+```
+Input: () => console.log("I am being called"), 4
+
+Output:
+Logs:
+"I am being called"
+"I am being called"
+"I am being called"
+"I am being called"
+```
+
+## Question Four
 
 Write a function that take in a number and two callbacks.  It should apply the first callback to the number, then the second callback, then return the result
 
@@ -35,7 +54,7 @@ Output: 14
 ```
 
 
-## Question Four
+## Question Five
 
 You are given the following functions:
 ```js
@@ -69,7 +88,7 @@ console.log(shouldIBuyThis(101, conservativeSpender))
 
 ```
 
-## Question Five
+## Question Six
 
 a. Write a function `forEachElem` that takes in an array and a callback. Call the callback on each element in the array.
 
@@ -111,7 +130,7 @@ true is a boolean
 [object Object] is a object
 ```
 
-## Question Six
+## Question Seven
 
 a. Write a function called `myMap` that takes in an array and a callback as arguments.  It should return a new array with the callback applied to each element in the array.
 
@@ -139,7 +158,7 @@ Output:
 ]
 ```
 
-## Question Seven
+## Question Eight
 
 a. Write a function called `myFilter` that takes in an array and a callback as arguments.  The callback should take in an element and return a boolean.  `myFilter` should return a new array with only values that return true when passed into the callback.
 
@@ -172,3 +191,7 @@ Output:
   'ECMAScript',
   'specification' ]
 ```
+
+## Question Nine
+
+[Callback questions from codewars](https://www.codewars.com/collections/callback)

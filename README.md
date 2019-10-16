@@ -97,10 +97,10 @@ Input: [1,4,5,6], (elem) => console.log("$" + elem)
 
 Output:
 Logs the following to the console:
-1
-4
-5
-6
+$1
+$4
+$5
+$6
 ```
 
 b. Create a function `logEachElem` that takes an array as an argument logs every element in the input array.  Use `forEachElem` inside the body of your function.

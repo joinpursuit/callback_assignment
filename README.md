@@ -126,13 +126,7 @@ c. Create a function `logArrTypes` that uses the `forEachElem` method to log eac
 a. Write a function called `myMap` that takes in an array and a callback as arguments.  It should return a new array with the callback applied to each element in the array.
 
 ```
-function myMap (array, callback) {
-  let outputArr = [];
-  for (let i = 0; i < array.length; i++) {
-    outputArr.push(callback(array[i]));
-  }
-  return outputArr;
-};
+
 
 
 ```

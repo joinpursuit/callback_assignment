@@ -1,20 +1,40 @@
 //Question 1
-const caller = (callback) => {
-    callback()
-}
+// const caller = (callback) => {
+//     callback()
+// }
 const sayHello = () => {
+console.log("Hello")
+}
 
-console.log("Hello")}
-caller(sayHello)
+// caller(sayHello)
 
 //Question 2
-const ignoreCall = (callback, Boolean) => {
-    if(Boolean === true){
-        callback()
-    } else {
-        console.log("Ignoring the callback")
-    }
-}   
-ignoreCall(sayHello, true)
+// const ignoreCall = (callback, Boolean) => {
+//     if(Boolean === true){
+//         callback()
+//     } else {
+//         console.log("Ignoring the callback")
+//     }
+// }   
+// ignoreCall(sayHello, true)
 
 //Question 3
+// const occurrences = (callback, num) => {
+//     for (let i = 0; i < num; i++) {
+//         callback();
+//     }
+// }
+
+// occurrences(sayHello, 3);
+
+//Question 4
+// const function1 = (callback1, callback2, num) => {
+//     console.log(callback2(callback1(num)));
+// }
+
+// const add = (num) => num + 1;
+// const multiply = (num) => num * 2;
+
+// function1(add, multiply, 2);
+
+//Question 5

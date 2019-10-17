@@ -22,7 +22,7 @@ Write a function that takes in a callback and a boolean.  If the boolean is true
 
 ```
 function callIfTrue(callback, boolean) {
-  boolean === true ? callback() : console.log("Ignoring the callback")
+  boolean ? callback() : console.log("Ignoring the callback")
 }
 callIfTrue(sayHello, false)
 ```

@@ -32,9 +32,9 @@ const thirdFunc = (callback, number) => {
 }
 thirdFunc("Hello World", 2)
 
-const thirdFunc = (callback, number) => {
-    for (let i = 0; i < number ; i++) {
-        return callback
-    }
-}
-console.log(thirdFunc("hello world", 2))
+// const thirdFunc = (callback, number) => {
+//     for (let i = 0; i < number ; i++) {
+//         return callback
+//     }
+// }
+// console.log(thirdFunc("hello world", 2))

@@ -268,7 +268,7 @@ console.log(removeEvenNumbers([1,2,3,4,5,6,7,8,9]))
 const removeShortWords = (arr) => {
     return myFilter(arr, (element) => {
         return element.length > 4
-        // if (element.length >= 4){
+        // if (element.length >= 4){            // also another viable solution but redundant
         //     return element;
         // }
     })

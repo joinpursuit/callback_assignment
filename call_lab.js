@@ -95,7 +95,7 @@ console.log(shouldIBuyThis(101, conservativeSpender))
   // console.log(shouldIBuyThis(20, conservativeSpender))
   // console.log(shouldIBuyThis(101, conservativeSpender))
 
-  console.log("Question 6b")
+  console.log("Question 6b") //
 
   const forEachElem = (arr,cb1)=>{
       cb1= cb1(arr);

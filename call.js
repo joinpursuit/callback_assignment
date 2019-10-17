@@ -31,7 +31,7 @@
 // }
 // console.log(called())
 
-
+// Question 4
 // const result = (callback1, callback2, num) => {
         
 //         num = callback1(num)
@@ -45,3 +45,6 @@
 //     return num * 2
 // }
 // console.log(result(completeCallBack, finalCallBack, 9))
+
+//Question 5
+

@@ -38,3 +38,13 @@ thirdFunc("Hello World", 2)
 //     }
 // }
 // console.log(thirdFunc("hello world", 2))
+
+
+//Question four
+
+const fourthfunction = (num, cb, cb2) => {
+    
+    return cb2(cb(num))
+}
+
+console.log(fourthfunction(4, (num) => num += 4, (num) => num /= 2))

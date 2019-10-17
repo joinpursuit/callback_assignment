@@ -150,6 +150,49 @@ const logArrTypes = (arr) => {
   logArrTypes([1,true, {}])
 
   //question 7
-  const myMap = (arr,callback) => {
+      const myMap = (arr,callback) => {
+      arr1 = []
+      for(let i = 0; i < arr.length; i++){
+          //callback(arr[i])
+         arr1.push(callback(arr[i])) 
+      }
+        return arr1;
+      }
+      const tripleArray = (arr) => {
+        return myMap (arr, (num) => num*3)
+      }
+
+    console.log(tripleArray([1,2,3]));
+
+    //B
+    const allCaps = (arr) => {
+      return myMap(arr, (index) => index.toUpperCase())
+    }
+    console.log(allCaps(["hello"]));
+
+    //question 8; 
+    const myFilter = (arr, callback) => {
+      let newArr = [];
+      for(let i = 0; i < arr.length; i++){
+          if(callback(arr[i])){
+             newArr.push(arr[i]);
+          }
+      }
+      return newArr;
+    }
     
+    
+  console.log(myFilter([1,2,3,4,5,6,7,8,9,10], (num) => num < 5));
+  
+  //b 
+  const removeEvenNumbers = (arr) => {
+    return myFilter(arr, (el) => (el % 2 === 1));
   }
+    console.log(removeEvenNumbers([1,2,3,4,5,6]));
+    //c 
+    const removeShortWords = (arr) => {
+      return myFilter(arr, (el) => el.length > 4)
+    }
+
+  console.log(removeShortWords(["Hello", "Hi", "Goodmorning","yerr","yerrrr"]));
+  

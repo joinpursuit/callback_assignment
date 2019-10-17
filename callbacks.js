@@ -38,24 +38,45 @@ console.log("Hello")
 // function1(add, multiply, 2);
 
 //Question 5
-function conservativeSpender(balance)  {
-    return balance > 100
-  }
+// function conservativeSpender(balance)  {
+//     return balance > 100
+//   }
   
-  function liberalSpender(balance) {
-    return balance > 10
-  }
+//   function liberalSpender(balance) {
+//     return balance > 10
+//   }
   
-  function horribleSaver (balance) {
-    return balance > 0
-  }
+//   function horribleSaver (balance) {
+//     return balance > 0
+//   }
 
-const shouldIBuyThis = (balance, callback) => {
-    if (callback(balance)) {
-        console.log("Sure! I've got the money!")
-    } else {
-        console.log("Nope! Gotta keep my savings up!")
+// const shouldIBuyThis = (balance, callback) => {
+//     if (callback(balance)) {
+//         console.log("Sure! I've got the money!")
+//     } else {
+//         console.log("Nope! Gotta keep my savings up!")
+//     }
+// }
+
+// shouldIBuyThis(20, conservativeSpender);
+
+//Question 6a
+const forEachElem = (arr, callback) => {
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i]);
     }
 }
 
-shouldIBuyThis(20, conservativeSpender);
+//Question 6b
+// const logEachElem = (arr) => {
+//     forEachElem(arr, (i) => console.log(i));
+// }
+
+// logEachElem([1,2,34]);
+
+//Question 6c
+const logArrTypes = (arr) => {
+    forEachElem(arr, (i) => console.log(`${i} is a ${typeof(i)}`));
+}
+logArrTypes([1, "Hi", true, {color: "green"}]);
+

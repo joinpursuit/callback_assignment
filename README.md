@@ -194,4 +194,8 @@ Output:
 
 ## Question Nine
 
+<<<<<<< HEAD
 [Callback questions from codewars](https://www.codewars.com/collections/callback)
+=======
+[Callback questions from codewars](https://www.codewars.com/collections/callback)
+>>>>>>> c83d72acda3e35243fe518d7ca66b1d05f8acbf8

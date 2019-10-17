@@ -38,6 +38,15 @@ Input: () => console.log("Testing"), false
 Output:
 Logs "Ignoring the callback" to the console.
 ```
+const callBackBool = (boolean) => {
+    if (boolean === true) {
+        return true 
+    } else {
+        return "Ignoring the callback"
+    }
+}
+console.log(callBackBool(0 === ""))
+
 
 ## Question Three
 
@@ -52,6 +61,12 @@ Logs:
 "I am being called"
 "I am being called"
 ```
+const callBck = (fn, num) => {
+    for(let i= 0; i < num ; i++){
+        fn()
+    }
+}
+callBck(() => console.log("I am being called"), 4)
 
 ## Question Four
 
@@ -63,7 +78,12 @@ Input: 4, (num) => num + 3, (num) => num * 2
 Output: 14
 
 ```
+const callbkTwice = (num, fn1, fn2) => {
+    num = fn1(num);
+    return fn2(num);
+} 
 
+console.log(callbkTwice(4, (num) => num + 3, (num) => num * 2))
 
 ## Question Five
 

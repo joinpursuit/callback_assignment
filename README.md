@@ -12,6 +12,17 @@ function() { console.log("Hello!") }
 Output:
 Logs "Hello!" to the console
 ```
+const callBack = (fn) => {
+    return fn
+}
+
+
+const greet = () => {
+    return "Hello!"
+}
+
+
+console.log(greet(callBack))
 
 ## Question Two
 

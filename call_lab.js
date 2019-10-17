@@ -46,35 +46,35 @@
 // console.log(finResult(4,mut2,sub,add3,div))
 
 
-console.log("Question 5")
-function conservativeSpender(balance)  {
-    return balance > 100
-  }
+// console.log("Question 5")
+// function conservativeSpender(balance)  {
+//     return balance > 100
+//   }
   
-  function liberalSpender(balance) {
-    return balance > 10
-  }
+//   function liberalSpender(balance) {
+//     return balance > 10
+//   }
   
-  function horribleSaver (balance) {
-    return balance > 0
-  }
+//   function horribleSaver (balance) {
+//     return balance > 0
+//   }
 
-const shouldIBuyThis = (balance,func) => {
-  if (func(balance)=== true){
-    console.log("sure i got the the money")
-  } else {
-    console.log("nope, i got to keep my savings up")
-  }
+// const shouldIBuyThis = (balance,func) => {
+//   if (func(balance)=== true){
+//     console.log("sure i got the the money")
+//   } else {
+//     console.log("nope, i got to keep my savings up")
+//   }
   // return func(balance)
   
-} 
-console.log(shouldIBuyThis(20, horribleSaver))
+// } 
+// console.log(shouldIBuyThis(20, horribleSaver))
 
-console.log(shouldIBuyThis(20, liberalSpender))
-// logs: "Sure! I've got the money!"
-console.log(shouldIBuyThis(20, conservativeSpender))
-// logs:  "Nope! Gotta keep my savings up!"
-console.log(shouldIBuyThis(101, conservativeSpender))
+// console.log(shouldIBuyThis(20, liberalSpender))
+// // logs: "Sure! I've got the money!"
+// console.log(shouldIBuyThis(20, conservativeSpender))
+// // logs:  "Nope! Gotta keep my savings up!"
+// console.log(shouldIBuyThis(101, conservativeSpender))
 
 
 
@@ -95,16 +95,35 @@ console.log(shouldIBuyThis(101, conservativeSpender))
   // console.log(shouldIBuyThis(20, conservativeSpender))
   // console.log(shouldIBuyThis(101, conservativeSpender))
 
-  console.log("Question 6b") //
-
-  const forEachElem = (arr,cb1)=>{
-      cb1= cb1(arr);
-    }
-    const logE = (arr) =>{      
-        let newArr =[];
-      for (let i = 0; i<arr.length; i++){
-    console.log(newArr.push(arr[i]))
-    }
+console.log("Problem 6 A:")
+const forEachElem = (arr,func) => {
+   for (i = 0; i < arr.length; i++){
+         func(arr[i]) 
+   }
 }
 
-    console.log(forEachElem([1,2,3,5],logE))
+console.log(forEachElem( [1,4,5,6], (elem) => console.log("$" + elem)))
+
+
+
+console.log("Problem 6 B:");
+
+
+
+const logEachElem = (arr) => {
+  forEachElem(arr,(elem) => console.log(elem));
+}
+console.log(logEachElem([1,2,34]));
+
+
+console.log("Problem 6 C:");
+
+
+
+const logArrTypes = (arr) => {
+  forEachElem(arr,(elem) => console.log((forEachElem(arr, (elem) => console.log(elem+ " is " +typeof elem)))))
+  // console.log(typeof arr)
+}
+console.log(logArrTypes([1,"Hi", true, {color: "green"}]));
+
+  

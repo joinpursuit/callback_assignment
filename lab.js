@@ -25,10 +25,8 @@
 
 // Question 3
 
-<<<<<<< HEAD
 const callNum = (num, cb) => {
     
-=======
 const repeat = (num,fn) =>{
     let counter = 1
     while(counter <= num ){
@@ -36,6 +34,5 @@ const repeat = (num,fn) =>{
         counter += 1
     }
 }
->>>>>>> f5093e343687fad9ac741de69bb531d07da1e66d
 
 repeat(4,() => console.log(`I'm being called`))

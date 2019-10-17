@@ -42,9 +42,41 @@ thirdFunc("Hello World", 2)
 
 //Question four
 
-const fourthfunction = (num, cb, cb2) => {
+// const fourthfunction = (num, cb, cb2) => {
     
-    return cb2(cb(num))
+//     return cb2(cb(num))
+// }
+
+// console.log(fourthfunction(4, (num) => num += 4, (num) => num /= 2))
+
+// ## Question Five
+
+// You are given the following functions:
+// ```js
+
+function conservativeSpender(balance)  {
+  return balance > 100
 }
 
-console.log(fourthfunction(4, (num) => num += 4, (num) => num /= 2))
+function liberalSpender(balance) {
+  return balance > 10
+}
+
+function horribleSaver (balance) {
+  return balance > 0
+}
+
+// ```
+
+// Write a function `shouldIBuyThis` that takes in a balance and a callback (one of the above functions). The function should return either
+// "Sure! I've got the money!" or "Nope! Gotta keep my savings up!"
+
+const shouldIBuyThis = (balance, callback) => {
+    if (callback(balance) === true) {
+        return ("Sure! I've got the money!")
+    } else if (callback(balance) === false) {
+        return ("Nope! Gotta keep my savings up")
+    }  
+    }
+
+    console.log(shouldIBuyThis(12, liberalSpender))

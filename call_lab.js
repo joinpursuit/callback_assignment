@@ -126,4 +126,52 @@ const logArrTypes = (arr) => {
 }
 console.log(logArrTypes([1,"Hi", true, {color: "green"}]));
 
-  
+
+console.log("Problem 7A:");
+
+const myMap = (arr, cb) => {
+  let result = [];
+  for(let i = 0; i< arr.length; i++) {
+      result.push(cb(arr[i]))
+  }
+  return result
+}
+
+console.log(myMap([3,5,6], function(num) { return num * 3 }));
+
+console.log("Problem 7B:");
+
+const allCaps = (arr) => {return arr.toUpperCase()}
+console.log(myMap(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"], allCaps));
+
+console.log("Problem 8");
+
+const myFilter = (arr,cb)=>{
+    let newArr = [];
+  for (let i =0; i<arr.length; i++){
+        newArr.push(cb(arr[i]))
+      } 
+      return newArr;
+    }
+const numLess5 = arr =>{
+    if (arr <5){
+      return arr
+    }
+}
+console.log(myFilter([1,4,6,7, -3], numLess5))
+
+const numLessEven = arr =>{
+  if (arr %2 !==0){
+    return arr
+  } 
+}
+console.log(myFilter([1,2,3,4,5,6,7,8,9], numLessEven))
+
+const removeShortWords = (arr) =>{
+  if (myFilter(arr, (el) => el.length>=4)){
+    return arr
+  }
+}
+
+let string2 = ["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"]
+console.log(myFilter(string2, removeShortWords))

@@ -196,17 +196,23 @@ logArrTypes([1,"Hi",true, {color: "green"}])
 const myMap = (arr, callback) => {
     let result = [];
     for(let i = 0; i < arr.length; i++){
-        
+        result.push(callback(arr[i]));
     }
+    return result;
 }
 // ```
 // Input: [3,5,6], function(num) { return num * 3 }
 
 // Output: [9, 15, 18]
 // ```
+console.log(myMap([3,5,6], (num) => num *3));
 
 
 // b. Create a function `allCaps` that takes in an array as an argument, and uses the `myMap` function to return all the elements capitalized.
+const allCaps = (arr) => {
+    return myMap(arr, (elements) => (elements.toUpperCase()));
+}
+console.log(allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"]));
 
 // ```
 // Input: ["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"]
@@ -226,6 +232,16 @@ const myMap = (arr, callback) => {
 // ## Question Eight
 
 // a. Write a function called `myFilter` that takes in an array and a callback as arguments.  The callback should take in an element and return a boolean.  `myFilter` should return a new array with only values that return true when passed into the callback.
+const myFilter = (arr, callback) => {
+    let result = []
+    for (let i = 0; i < arr.length; i++){
+        if(callback(arr[i])){
+            result.push(arr[i]);
+        }
+    } 
+    return result;
+}
+console.log(myFilter([1,4,6,7, -3], (num) => num < 5));
 
 // ```
 // Input: [1,4,6,7, -3], num => num < 5
@@ -239,8 +255,25 @@ const myMap = (arr, callback) => {
 // Input: [1,2,3,4,5,6,7,8,9]
 // Output: [1,3,5,7,9]
 // ```
+const removeEvenNumbers = (arr) => {
+    return myFilter(arr, (element) => {
+        return (element % 2 === 1)
+    })
+}
+console.log(removeEvenNumbers([1,2,3,4,5,6,7,8,9]))
+
+
 
 // c. Write a function called `removeShortWords` that takes in an array and returns an array with all strings containing fewer than 4 characters removed.
+const removeShortWords = (arr) => {
+    return myFilter(arr, (element) => {
+        return element.length > 4
+        // if (element.length >= 4){
+        //     return element;
+        // }
+    })
+}
+console.log(removeShortWords(["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"]));
 
 // ```
 // Input: ["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"]

@@ -77,7 +77,7 @@ const repeat = (num,fn) =>{
 
 // console.log(shouldIBuyThis(20,horribleSaver))
 
-// question six
+// question six A
 
 const forEachElem = (arr,callBack) => {
     for (let i = 0; i < arr.length; i += 1) {
@@ -85,4 +85,7 @@ const forEachElem = (arr,callBack) => {
     }
 }
 
-forEachElem([1,4,5,6], (elem) => console.log("$"+ elem))
+// forEachElem([1,4,5,6], (elem) => console.log("$"+ elem))
+
+//6 
+

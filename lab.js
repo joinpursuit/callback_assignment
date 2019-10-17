@@ -25,6 +25,7 @@ console.log
 
 // Question 3
 
-// const callNum = (num, cb) => {
+const callNum = (num, cb) => {
+    
 
 // }

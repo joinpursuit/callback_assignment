@@ -28,3 +28,20 @@ console.log(doubleCallback(2, (num) => num * 3, (num) => num + 2))
 
 
 // 5.
+function conservativeSpender(balance)  {
+    return balance > 100
+  }
+
+function liberalSpender(balance) {
+    return balance > 10
+  }
+  
+  function horribleSaver (balance) {
+    return balance > 0
+  }
+
+const shouldIBuyThis = (balance, callback) => {
+    return callback(balance) ? "Sure, I've got money" :"Nope! Gotta kepp my savings up"
+}
+        // callback is returning a boolean based on the balance
+console.log(shouldIBuyThis(20,liberalSpender))

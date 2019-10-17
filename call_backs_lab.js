@@ -19,3 +19,12 @@ const repeatFunction = (cb,num) => {
 }
 }
 repeatFunction(() => console.log("hello"), 6)
+
+// 4.
+const doubleCallback = (num, cb1, cb2) => {
+    return cb2(cb1(num))
+}
+console.log(doubleCallback(2, (num) => num * 3, (num) => num + 2))
+
+
+// 5.

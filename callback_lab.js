@@ -13,14 +13,14 @@
 // Logs "Hello!" to the console
 // ```
 const caller = (callback) => {
-    return callback;
+    return callback();
 }
 
 const myHello = () => {
-    caller();
+    return "Hello!";                // explicit
 }
 
-myHello(console.log("Hello!"));
+console.log(caller(myHello));
 
 // ## Question Two
 
@@ -36,6 +36,15 @@ myHello(console.log("Hello!"));
 // Output:
 // Logs "Ignoring the callback" to the console.
 // ```
+const callCb = (callback, Boolean) => {
+    if(Boolean === true){
+        return callback();
+    } else{
+        return "Ignoring the callback";
+    }
+}
+
+console.log(callCb(myHello, false));
 
 
 // ## Question Three
@@ -51,6 +60,12 @@ myHello(console.log("Hello!"));
 // "I am being called"
 // "I am being called"
 // ```
+const callbackTimes = (callback,num) => {
+    for (let i = 0; i < num; i++){
+        console.log(callback());
+    }
+}
+callbackTimes(myHello, 4);
 
 // ## Question Four
 
@@ -62,29 +77,49 @@ myHello(console.log("Hello!"));
 // Output: 14
 
 // ```
+const add3 = (num) => num + 3;
+const mult2 = (num) => num * 2;
 
+const twoCallbacks = (num, callback1, callback2) => {
+    let result1 = callback1(num);
+    let result2 = callback2(result1);
+    return result2;
+}
+console.log(twoCallbacks(4, add3, mult2));
 
 // ## Question Five
 
 // You are given the following functions:
 // ```js
 
-// function conservativeSpender(balance)  {
-//   return balance > 100
-// }
+function conservativeSpender(balance)  {
+  return balance > 100
+}
 
-// function liberalSpender(balance) {
-//   return balance > 10
-// }
+function liberalSpender(balance) {
+  return balance > 10
+}
 
-// function horribleSaver (balance) {
-//   return balance > 0
-// }
+function horribleSaver (balance) {
+  return balance > 0
+}
 
 // ```
 
 // Write a function `shouldIBuyThis` that takes in a balance and a callback (one of the above functions). The function should return either
 // "Sure! I've got the money!" or "Nope! Gotta keep my savings up!"
+
+const shouldIBuyThis = (balance, callback) => {
+    if(callback(balance)){                 // we want to satisfy the conditions in the call back functions. Use Boolean to check
+        console.log("Sure! I've got the money!")
+    } else{
+        console.log("Nope! Gotta keep my savings up!")
+    }                 
+}
+shouldIBuyThis(20, horribleSaver);
+shouldIBuyThis(20, liberalSpender);
+shouldIBuyThis(20, conservativeSpender);
+shouldIBuyThis(101, conservativeSpender);
 
 // ```js
 // console.log(shouldIBuyThis(20, horribleSaver))
@@ -97,6 +132,8 @@ myHello(console.log("Hello!"));
 // // logs: "Sure! I've got the money!"
 
 // ```
+
+
 
 // ## Question Six
 
@@ -112,10 +149,20 @@ myHello(console.log("Hello!"));
 // 5
 // 6
 // ```
+const forEachElem = (arr, callback) => {
+    for(let i = 0; i < arr.length; i++){
+        callback(arr[i]);
+    }
+}
+forEachElem([1,4,5,6], (elem) => console.log("$" + elem));
+// the callback here is (elem) => console.log("$" + elem)
+// we could have also made another function as the callback
 
 // b. Create a function `logEachElem` that takes an array as an argument logs every element in the input array.  Use `forEachElem` inside the body of your function.
-
-
+const logEachElem = (arr) => {
+    return forEachElem(arr, (elem) => console.log(elem));
+} 
+logEachElem([1, 2, 34]);
 // ```
 // Input: [1,2,34]
 
@@ -127,7 +174,10 @@ myHello(console.log("Hello!"));
 // ```
 
 // c. Create a function `logArrTypes` that uses the `forEachElem` method to log each array element followed by its type.
-
+const logArrTypes = (arr) => {
+    return forEachElem(arr, (elem) => console.log(elem + " is a " + typeof(elem)))
+}
+logArrTypes([1,"Hi",true, {color: "green"}])
 
 // ```
 // Input: [1,"Hi", true, {color: "green"}]
@@ -143,7 +193,12 @@ myHello(console.log("Hello!"));
 // ## Question Seven
 
 // a. Write a function called `myMap` that takes in an array and a callback as arguments.  It should return a new array with the callback applied to each element in the array.
-
+const myMap = (arr, callback) => {
+    let result = [];
+    for(let i = 0; i < arr.length; i++){
+        
+    }
+}
 // ```
 // Input: [3,5,6], function(num) { return num * 3 }
 

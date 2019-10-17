@@ -38,3 +38,24 @@ console.log("Hello")
 // function1(add, multiply, 2);
 
 //Question 5
+function conservativeSpender(balance)  {
+    return balance > 100
+  }
+  
+  function liberalSpender(balance) {
+    return balance > 10
+  }
+  
+  function horribleSaver (balance) {
+    return balance > 0
+  }
+
+const shouldIBuyThis = (balance, callback) => {
+    if (callback(balance)) {
+        console.log("Sure! I've got the money!")
+    } else {
+        console.log("Nope! Gotta keep my savings up!")
+    }
+}
+
+shouldIBuyThis(20, conservativeSpender);

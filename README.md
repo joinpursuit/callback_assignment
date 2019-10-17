@@ -32,7 +32,7 @@ callIfTrue(sayHello, false)
 
 Write a function that takes in a callback and a number.  It should call the callback that many times.
 ```
-const antine = (callback, num) => {
+const manyTimes = (callback, num) => {
     let i = 1
    
     while (i <= num){
@@ -42,7 +42,7 @@ const antine = (callback, num) => {
     return 
 
 }
-antine( () => console.log("Testing "), 4)
+manyTimes( () => console.log("Testing "), 4)
 
 ```
 
@@ -52,7 +52,7 @@ Write a function that take in a number and two callbacks.  It should apply the f
 
 ```
 const doubleCall = (num, cb1, cb2) => cb2(cb1(num))
-console.log(doubleCall(4, (num) => num + 3, (numrz) => num * 2))
+console.log(doubleCall(4, (num) => num + 3, (num) => num * 2))
 
 ```
 

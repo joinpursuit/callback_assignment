@@ -16,5 +16,5 @@ const secondFunc = (callback, boolean) => {
     }
 }
 
-console.log(secondFunc("B", true))
+console.log(secondFunc("B", false))
 

@@ -15,35 +15,35 @@
 
 
 
-const question1 = (callback) => {
-    return callback
-}
-console.log(question1("hello"))
+// const question1 = (callback) => {
+//     return callback
+// }
+// console.log(question1("hello"))
 
 
-// ## Question Two
+// // ## Question Two
 
-// Write a function that takes in a callback and a boolean.  If the boolean is true, call the callback, otherwise log "Ignoring the callback" to the console.
+// // Write a function that takes in a callback and a boolean.  If the boolean is true, call the callback, otherwise log "Ignoring the callback" to the console.
 
-// ```
-// Input: () => console.log(""), true
+// // ```
+// // Input: () => console.log(""), true
 
-// Output:
-// Logs "" to the console
+// // Output:
+// // Logs "" to the console
 
-// Input: () => console.log("Testing"), false
-// Output:
-// Logs "Ignoring the callback" to the console.
-// ```
+// // Input: () => console.log("Testing"), false
+// // Output:
+// // Logs "Ignoring the callback" to the console.
+// // ```
 
-const question2 = () => {
-    return true
-}
+// const question2 = () => {
+//     return true
+// }
 
-const cbq2 = (num1, num2) => {
-    return num1 > num2 ? question2() : console.log("Ignoring the callback");
-}
-console.log(cbq2(8,7))
+// const cbq2 = (num1, num2) => {
+//     return num1 > num2 ? question2() : console.log("Ignoring the callback");
+// }
+// console.log(cbq2(8,7))
 
 
 
@@ -64,19 +64,29 @@ console.log(cbq2(8,7))
 // "I am being called"
 // ```
 
-let timer = 0
-// setInterval(() => {
-//     console.log("I am being called")
-// },4)
-let num = 0;
-setTimeout(() => {
-    num++
-    if(num > 4){
-        clearInterval(timer)
-    }else{
-        console.log("I am being called")
-    }
-}, 1);
+// let timer = 0
+// // setInterval(() => {
+// //     console.log("I am being called")
+// // },4)
+// let num = 0;
+// setTimeout(() => {
+//     num++
+//     if(num > 4){
+//         clearInterval(timer)
+//     }else{
+//         console.log("I am being called")
+//     };
+// }, 1);
+
+
+// // let str = "I am being called"
+// const something = (str, callback) => {
+//   for (let i = 0; i > str; i++){
+//     callback(num[i]);
+//   };
+//   return something(str, );
+// };
+// something(0, (num) => console.log("I am being called"));
 
 
 
@@ -89,7 +99,22 @@ setTimeout(() => {
 
 // Output: 14
 
-// ```
+// // ```
+// const first = (num) => {
+//   return num + 1
+// };
+// const second = (num) => {
+//  return num +6
+// };
+// const question4 = (num, callback1, callback2) => {
+//   return  callback2(callback1(num))
+// };
+// console.log(question4(5,first,second));
+
+
+
+
+
 
 
 // ## Question Five
@@ -124,11 +149,46 @@ setTimeout(() => {
 // console.log(shouldIBuyThis(101, conservativeSpender))
 // // logs: "Sure! I've got the money!"
 
-// ```
+//
+
+// function conservativeSpender(balance)  {
+//   return balance > 100
+// };
+
+// function liberalSpender(balance) {
+//   return balance > 10
+// };
+
+// function horribleSaver (balance) {
+//   return balance > 0
+// };
+
+// const shouldIBuyThis = (balance, fn)=> {
+//   if(fn(balance) === true){
+//     return "Sure! I've got the money!"
+//   } else {
+//     return "Nope! Gotta keep my savings up!"
+//   };
+// };
+ 
+// console.log(shouldIBuyThis(0,liberalSpender));
+
+
 
 // ## Question Six
 
 // a. Write a function `forEachElem` that takes in an array and a callback. Call the callback on each element in the array.
+const forEachElem = (arr, callback) => {
+  for(let i=0; i<arr.length; i++){
+    callback(arr[i]);
+  };
+};
+console.log(forEachElem([1,4,5,6], (elem) => console.log("$" + elem)));
+
+
+
+
+
 
 // ```
 // Input: [1,4,5,6], (elem) => console.log("$" + elem)

@@ -80,5 +80,18 @@ const forEachElem = (arr,callBack) => {
 
 // forEachElem([1,4,5,6], (elem) => console.log("$"+ elem))
 
-//6 
+//6 b
 
+const logEachElem = (arr) => {
+    return forEachElem(arr, num => console.log(num))
+}
+
+logEachElem([1,2,3])
+
+// 6 c
+
+const logArrTypes = (arr) => {
+    return forEachElem(arr, num => console.log(num + " is a " + typeof num))
+}
+
+logArrTypes([1,"Hi", true, {color: "green"}])

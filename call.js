@@ -18,13 +18,30 @@
 // }
 // console.log(boo1(true, callback))
 
-const returnNum = (num, callback) => {
-   for(let i=0; i < num; i++){
-       console.log (callback())
-   }
-}
+// const called = (callback, number) => {
+//         return callback * 
+//     }
+//     console.log(called("Im being called"))
 
-const multi = () =>{
-    return "I am being Called"
-}
-console.log(returnNum(4,multi));
+// const multi = (number) => {
+//     for (i = 0; i <= number; i++){
+//     called(callback (string) => string * number
+//     return multi
+//     }
+// }
+// console.log(called())
+
+
+// const result = (callback1, callback2, num) => {
+        
+//         num = callback1(num)
+//        let  multi = callback2(num)
+//         return multi
+// }
+// const completeCallBack = (num) => {
+//     return num + 3
+// }
+// const finalCallBack = (num) => {
+//     return num * 2
+// }
+// console.log(result(completeCallBack, finalCallBack, 9))

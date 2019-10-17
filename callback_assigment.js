@@ -36,16 +36,30 @@
 // Logs "Ignoring the callback" to the console.
 // ```
 
-const callback = (fn) => {
-    return (fn)
+const isItTrue = () => {
+    return true;
 }
 
-const booleanCb = (cb, boolean) => {
-    if(boolean) {
-         callback
+const booleanCb = (cb,num ) => {//help
+    if(num % 2 === 1) {
     } else {
-        console.log("Ignoring the callback")
+        return "Ignoring the callback"
     }
 }
 
-console.log(callback("Testing"))
+console.log(booleanCb(isItTrue,5))
+
+// ## Question Three
+
+// Write a function that takes in a callback and a number.  It should call the callback that many times.
+// ```
+// Input: () => console.log("I am being called"), 4
+
+// Output:
+// Logs:
+// "I am being called"
+// "I am being called"
+// "I am being called"
+// "I am being called"
+// ```
+

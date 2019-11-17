@@ -83,3 +83,35 @@ const logEachElem = (arr) => {
 }
 
 logEachElem([1,2,34])
+
+const logArrTypes = (arr) => {
+  forEachElem(arr, (el) => {
+    if(typeof(el) === "number"){
+      console.log(`${el} is a number`)
+    }else if(typeof(el) === "string"){
+      console.log(`${el} is a string`)
+    }else if(typeof(el) === "boolean"){
+      console.log(`${el} is a boolean`)
+    } else {
+      console.log(`[object Object] is a object`)
+    }
+  })
+}
+
+logArrTypes([1,"Hi", true, {color: "green"}])
+
+console.log("Question 7")
+const timesTwo = (num) => {
+  return num * 2
+}
+const myMap = (arr, callback) => {
+  let output = []
+  for(let i = 0; i < arr.length; i++){
+    let result = callback(arr[i])
+    output.push(result)
+  }
+  return output
+}
+
+// console.log(myMap([1, 2, 3], timesTwo))
+

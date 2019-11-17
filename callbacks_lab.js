@@ -75,3 +75,11 @@ if(fn(balance)){
   }
 
 forEachElem([1, 4, 5, 6], (cb) => console.log("$" + cb))
+
+const logEachElem = (arr) => {
+  return forEachElem(arr, (el) => {
+    console.log(el)
+  })
+}
+
+logEachElem([1,2,34])

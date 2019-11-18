@@ -101,9 +101,7 @@ const logArrTypes = (arr) => {
 logArrTypes([1,"Hi", true, {color: "green"}])
 
 console.log("Question 7")
-const timesTwo = (num) => {
-  return num * 2
-}
+
 const myMap = (arr, callback) => {
   let output = []
   for(let i = 0; i < arr.length; i++){
@@ -113,5 +111,28 @@ const myMap = (arr, callback) => {
   return output
 }
 
-// console.log(myMap([1, 2, 3], timesTwo))
+const allCaps = (arr) => {
+  return myMap(arr, (el) => {
+    return el.toUpperCase()
+  })
+}
+
+console.log("Question 8")
+ const myFilter = (arr, callback) => {
+   let output = []
+   for(let i = 0; i < arr.length; i++){
+     if(callback(arr[i])){
+       output.push(arr[i])
+     }
+   }
+   return output
+ }
+
+const removeEvenNumbers = (arr) => {
+  return myFilter(arr, (el) => el % 2)
+}
+
+const removeShortWords = (arr) => {
+  return myFilter(arr, (el) => el.length - 1 > 4)
+}
 

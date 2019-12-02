@@ -102,6 +102,9 @@ Logs the following to the console:
 5
 6
 ```
+const forEachElem=(arr,cb)=>{
+
+}
 
 b. Create a function `logEachElem` that takes an array as an argument logs every element in the input array.  Use `forEachElem` inside the body of your function.
 

@@ -1,22 +1,22 @@
 //Question 1
-// const caller = (callback) => {
-//     callback()
-// }
+const caller = (callback) => {
+    callback()
+}
 const sayHello = () => {
 console.log("Hello")
 }
 
-// caller(sayHello)
+caller(sayHello)
 
 //Question 2
-// const ignoreCall = (callback, Boolean) => {
-//     if(Boolean === true){
-//         callback()
-//     } else {
-//         console.log("Ignoring the callback")
-//     }
-// }   
-// ignoreCall(sayHello, true)
+const ignoreCall = (callback, Boolean) => {
+    if(Boolean === true){
+        callback()
+    } else {
+        console.log("Ignoring the callback")
+    }
+}   
+ignoreCall(sayHello, true)
 
 //Question 3
 // const occurrences = (callback, num) => {
@@ -74,28 +74,28 @@ const forEachElem = (arr, callback) => {
 
 // logEachElem([1,2,34]);
 
-//Question 6c
-// const logArrTypes = (arr) => {
-//     forEachElem(arr, (i) => console.log(`${i} is a ${typeof(i)}`));
-// }
-// logArrTypes([1, "Hi", true, {color: "green"}]);
+Question 6c
+const logArrTypes = (arr) => {
+    forEachElem(arr, (i) => console.log(`${i} is a ${typeof(i)}`));
+}
+logArrTypes([1, "Hi", true, {color: "green"}]);
 
-//Question 7a
+Question 7a
 
-// const myMap = (arr, callback) => {
-//     let emptyArray = []
-//     for(let i = 0; i < arr.length; i++) {
-//         emptyArray.push(callback(arr[i]))
-//     } return emptyArray
-// }
-// console.log(myMap([3,5,6], function(num) { return num * 3 }))
+const myMap = (arr, callback) => {
+    let emptyArray = []
+    for(let i = 0; i < arr.length; i++) {
+        emptyArray.push(callback(arr[i]))
+    } return emptyArray
+}
+console.log(myMap([3,5,6], function(num) { return num * 3 }))
 
-// //Question 7b
+//Question 7b
 
-// const allCaps = (arr) => {
-//     return myMap(arr, i => i.toUpperCase())
-// }
-//     console.log(allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"]))
+const allCaps = (arr) => {
+    return myMap(arr, i => i.toUpperCase())
+}
+    console.log(allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"]))
 
 //Question 8a
 const myFilter = (arr, callback) => {

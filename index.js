@@ -36,3 +36,14 @@ const repeatFour = () => {
     console.log("I am being called")
 }
 questionThree(repeatFour, 4)
+
+//Question 4
+
+const questionFour = (cb1, cb2, num) => {
+    console.log(cb2(cb1(num)))
+}
+
+const add = (num) => num + 3
+const multiply = (num) => num * 2
+
+questionFour(add, multiply, 4)

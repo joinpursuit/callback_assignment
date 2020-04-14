@@ -47,3 +47,30 @@ const add = (num) => num + 3
 const multiply = (num) => num * 2
 
 questionFour(add, multiply, 4)
+
+//Question 5
+
+function conservativeSpender(balance) {
+    return balance > 100
+    console.log("Sure! I've got the money!")
+}
+  
+function liberalSpender(balance) {
+    return balance > 10
+    console.log("Sure! I've got the money!")
+}
+  
+function horribleSaver (balance) {
+    return balance > 0
+    console.log("Sure! I've got the money!")
+}
+  
+const shouldIBuyThis = (balance, cb) => {
+    if (cb(balance)) {
+      console.log("Sure! I've got the money!")
+    } else {
+      console.log("Nope! Gotta keep my savings up!")
+    }
+}
+shouldIBuyThis(101, conservativeSpender)
+  

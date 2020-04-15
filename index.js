@@ -83,5 +83,14 @@ const forEachElem = (arr, cb) => {
 }
 forEachElem([1,4,5,6], (el) => console.log("$" + el))
 
+//Question 6b
+
+const logEachElem = (arr) => {
+    forEachElem(arr, (el) => console.log(el))
+}
+logEachElem([1,2,34])
+   
+   
+
   
   

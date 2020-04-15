@@ -77,10 +77,11 @@ shouldIBuyThis(101, conservativeSpender)
 //Question 6a
 
 const forEachElem = (arr, cb) => {
-    for (let i = 0; i < arr.length; i++) {
-      cb(arr[i])
-    }
+    arr.forEach((el) => {
+      cb(el)
+    })
 }
 forEachElem([1,4,5,6], (el) => console.log("$" + el))
+
   
   

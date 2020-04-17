@@ -89,7 +89,14 @@ const logEachElem = (arr) => {
     forEachElem(arr, (el) => console.log(el))
 }
 logEachElem([1,2,34])
-   
+
+//Question 6c
+
+const logArrTypes = (arr) => {
+    forEachElem(arr, el => console.log(el + " is a " + typeof(el)))
+}
+logArrTypes([1,"Hi", true, {color: "green"}])
+
    
 
   

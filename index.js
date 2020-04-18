@@ -126,6 +126,17 @@ const myFilter = (arr, cb) => {
 } 
 myFilter([1,4,6,7, -3], num => num < 5)
 
+//Question 8b
+
+const removeEvenNumbers = (arr) => {
+    return arr.filter((el) => {
+      if (el % 2 !== 0) {
+        return el
+      }
+    })
+}
+removeEvenNumbers([1,2,3,4,5,6,7,8,9])
+
 
   
 

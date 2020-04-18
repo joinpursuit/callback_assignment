@@ -97,7 +97,15 @@ const logArrTypes = (arr) => {
 }
 logArrTypes([1,"Hi", true, {color: "green"}])
 
-   
+//Question 7a
+
+const myMap = (arr, cb) => {
+    return arr.map((el) => { 
+      return cb(el) 
+    })
+}
+myMap([3,5,6], function(num) { return num * 3 })
+  
 
   
   

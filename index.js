@@ -104,7 +104,7 @@ const myMap = (arr, cb) => {
       return cb(el) 
     })
 }
-myMap([3,5,6], function(num) { return num * 3 })
+console.log(myMap([3,5,6], function(num) { return num * 3 }))
 
 //Question 7b
 
@@ -113,7 +113,7 @@ const allCaps = (arr) => {
       return el.toUpperCase()
     })
 }
-allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"])
+console.log(allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"]))
 
 //Question 8a
 
@@ -124,7 +124,7 @@ const myFilter = (arr, cb) => {
       }
     })
 } 
-myFilter([1,4,6,7, -3], num => num < 5)
+console.log(myFilter([1,4,6,7, -3], num => num < 5))
 
 //Question 8b
 
@@ -135,7 +135,7 @@ const removeEvenNumbers = (arr) => {
       }
     })
 }
-removeEvenNumbers([1,2,3,4,5,6,7,8,9])
+console.log(removeEvenNumbers([1,2,3,4,5,6,7,8,9]))
 
 //Question 8c
 
@@ -146,7 +146,7 @@ const removeShortWords = (arr) => {
       }
     })
 }
-removeShortWords(["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"])
+console.log(removeShortWords(["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"]))
 
 
   

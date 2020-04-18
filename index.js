@@ -114,6 +114,19 @@ const allCaps = (arr) => {
     })
 }
 allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"])
+
+//Question 8a
+
+const myFilter = (arr, cb) => {
+    return arr.filter((el) => {
+        if (cb(el)) {
+        return el
+      }
+    })
+} 
+myFilter([1,4,6,7, -3], num => num < 5)
+
+
   
 
   

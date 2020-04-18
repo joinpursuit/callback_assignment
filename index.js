@@ -137,6 +137,17 @@ const removeEvenNumbers = (arr) => {
 }
 removeEvenNumbers([1,2,3,4,5,6,7,8,9])
 
+//Question 8c
+
+const removeShortWords = (arr) => {
+    return arr.filter((el) => {
+      if (el.length >= 4) {
+        return el
+      }
+    })
+}
+removeShortWords(["JavaScript", "is", "a", "high-level,", "interpreted", "programming", "language", "that", "conforms", "to", "the", "ECMAScript", "specification"])
+
 
   
 

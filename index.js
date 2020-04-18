@@ -105,6 +105,15 @@ const myMap = (arr, cb) => {
     })
 }
 myMap([3,5,6], function(num) { return num * 3 })
+
+//Question 7b
+
+const allCaps = (arr) => {
+    return myMap(arr, (el) => {
+      return el.toUpperCase()
+    })
+}
+allCaps(["The", "internet", "is", "not", "a", "big", "truck.", "It's", "a", "series", "of", "tubes"])
   
 
   

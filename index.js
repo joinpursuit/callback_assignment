@@ -1,17 +1,17 @@
 //Question 1
 
-const questionOne = (cb) => {
+const callCallback = (cb) => {
     cb()
 }
 
 const sayHello = () => {
     console.log("Hello!") 
 }
-questionOne(sayHello)
+callCallback(sayHello)
 
 //Question 2
 
-const questionTwo = (cb, boolean) => {
+const ignoreCallback = (cb, boolean) => {
     if (boolean) {
         cb()
     } else {
@@ -22,11 +22,11 @@ const questionTwo = (cb, boolean) => {
 const runCallback = () => {
     console.log("Testing")
 }
-questionTwo(runCallback, true)
+ignoreCallback(runCallback, true)
 
 //Question 3
 
-const questionThree = (cb, num) => {
+const repeatCallback = (cb, num) => {
     for (let i = 0; i < num; i++) {
         cb()
     }
@@ -35,18 +35,18 @@ const questionThree = (cb, num) => {
 const repeatFour = () => {
     console.log("I am being called")
 }
-questionThree(repeatFour, 4)
+repeatCallback(repeatFour, 4)
 
 //Question 4
 
-const questionFour = (cb1, cb2, num) => {
+const mathExpression = (cb1, cb2, num) => {
     console.log(cb2(cb1(num)))
 }
 
 const add = (num) => num + 3
 const multiply = (num) => num * 2
 
-questionFour(add, multiply, 4)
+mathExpression(add, multiply, 4)
 
 //Question 5
 
